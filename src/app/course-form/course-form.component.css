@@ -1,0 +1,11 @@
+.form-control {
+    margin-top: 10px;
+}
+
+.form-control.ng-pristine.ng-invalid.ng-touched {
+    border: solid 1px red;
+}
+
+.alert.alert-danger {
+    margin-top: 5px;
+}
