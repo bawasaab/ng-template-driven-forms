@@ -7,28 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseFormComponent implements OnInit {
 
-    categories = [
-        {
-            id: 1,
-            name: 'Development',
-        },
-        {
-            id: 2,
-            name: 'Arts',
-        },
-        {
-            id: 3,
-            name: 'Languages',
-        }
-    ];
+    countries = [
+    {
+      country: 'India',
+      state: 'Punjab'
+    },
+    {
+      country: 'USA',
+      state: 'New York'
+    }
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit( courseObj :Object ) {
-    console.log('courseObj', courseObj);
+  handleSubmit( frmObj: any ) {
+
+    console.log('frmObj', frmObj);
+
+    if( !frmObj.submitted ) {
+      console.log('not submitted');
+      return;
+    }
+
+    // if( frmObj.invalid ) {
+    //   console.log('in_data.errors', frmObj.errors);  
+    //   return;
+    // }
+
+    let in_data = frmObj.value;
+    console.log('in_data', in_data);
   }
 
 }
